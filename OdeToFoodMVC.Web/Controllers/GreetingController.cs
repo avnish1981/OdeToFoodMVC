@@ -16,7 +16,7 @@ namespace OdeToFoodMVC.Web.Controllers
         {
             var model = new GreetingModel();
             model.proMessage = ConfigurationManager.AppSettings["disMessage"];
-                       
+                      
             return View(model);
         }
     }

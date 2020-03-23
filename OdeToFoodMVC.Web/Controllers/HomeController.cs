@@ -10,13 +10,11 @@ using System.Web.Mvc;
 namespace OdeToFoodMVC.Web.Controllers
 {
     public class HomeController : Controller
-    {
-
-        IRestaurantData db = null;
-        
-        public HomeController()
+    {         
+       private readonly IRestaurantData db;
+        public HomeController(IRestaurantData db)
         {
-            db = new clsInMemoryData();
+          this.db = db;
         }
         public ActionResult  Index()
         {
