@@ -9,23 +9,7 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<ul>
-    @foreach (var restaurant in Model)
-    {
-        <li>
-            @restaurant.Id
-        </li>
-        <li>
-            @restaurant.Name  
-        </li>
-        <li>
-            @restaurant.Location  
-        </li>
-        <li>
-            @restaurant.Cuisine  
-        </li>
-    }
-</ul>
+
 @*<div>There are @Enumerable.Count(Model) in the db</div>*@
-<div>There are @Model.Count()  in the DB</div>
+<div>There are @Model.Count() in the DB</div>
 @*Rezor Directive*@

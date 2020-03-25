@@ -18,10 +18,15 @@ namespace OdeToFood.Data.Services
 
              };
         }
-             
+
+        public Restaurant Get(int id)
+        {
+            return objRes.FirstOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable <Restaurant> GetAllRestaurant()
         {
-            return objRes.OrderBy(r => r.Name);
+            return objRes.OrderBy(r => r.Id );
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OdeToFood.Data.Models.Restaurant >
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>There are @Model.Count() Restaurants </div>
+
+<p>
+    @Html.ActionLink("Create","Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+    </tr>
+    
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+
+            @Html.DisplayFor(modelitem => item.Name)
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit",new { id = item.Id }) |
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details",new { id = item.Id }) |
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete",new { id = item.Id })
+        </td>
+    </tr>
+        }
+    
+
+    </table>
+
+
+
