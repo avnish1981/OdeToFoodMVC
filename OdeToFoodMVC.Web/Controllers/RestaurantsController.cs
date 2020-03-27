@@ -89,6 +89,17 @@ namespace OdeToFoodMVC.Web.Controllers
             return View(model);
            
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Restaurant incomingrestaurant)
+        {
+            if(ModelState.IsValid )
+            {
+                db.Delete(incomingrestaurant);
+            }
+
+            return View();
+        }
         
 
         

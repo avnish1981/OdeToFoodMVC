@@ -24,7 +24,10 @@ namespace OdeToFood.Data.Services
              objRes.Add(restaurant);
         }
 
-        
+        public void Delete(Restaurant restaurant)
+        {
+            objRes.Remove(restaurant);
+        }
 
         public Restaurant Get(int id)
         {
