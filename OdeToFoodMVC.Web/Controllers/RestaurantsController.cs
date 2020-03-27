@@ -78,6 +78,19 @@ namespace OdeToFoodMVC.Web.Controllers
             return View(updatedrestaurant);
         }
 
+        [HttpGet ]
+        public ActionResult Delete(int id)
+        {
+            var model = db.Get(id);
+            if(model==null)
+            {
+                return View("NotFound");
+            }
+            return View(model);
+           
+        }
+        
+
         
     }
 }
