@@ -14,7 +14,7 @@ namespace OdeToFoodMVC.Web.Controllers
         // GET: Greeting
         public ActionResult Index(string name)
         {
-            var model = new GreetingModel();
+            var model = new GreetingViewModel();
             model.proMessage = ConfigurationManager.AppSettings["disMessage"];
             model.Name = name ?? "NO name";       
             return View(model);
